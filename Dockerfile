@@ -17,6 +17,10 @@ RUN curl -fsL -o /usr/local/lib/python3.10/dist-packages/gradio/frpc_linux_amd64
 RUN adduser --disabled-password --gecos '' user && \
 	mkdir -p /content/app /content/data
 
+WORKDIR /content/app/models/checkpoints
+RUN wget -O otti.safetensors https://huggingface.co/AdiCakepLabs/otti_v1/resolve/main/otti.safetensors && \
+    wget -O illustrious-xl.safetensors https://huggingface.co/OnomaAIResearch/Illustrious-xl-early-release-v0/resolve/main/Illustrious-XL-v0.1.safetensors
+
 COPY entrypoint.sh /content/
 RUN chown -R user:user /content
 
