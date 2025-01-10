@@ -22,6 +22,7 @@ RUN wget -O illustrious-xl.safetensors https://huggingface.co/OnomaAIResearch/Il
     
 WORKDIR /content/app/models/loras
 RUN wget -O otti.safetensors https://huggingface.co/AdiCakepLabs/otti_v1/resolve/main/otti.safetensors
+RUN wget -O otti_v2_000002.safetensors https://huggingface.co/AdiCakepLabs/otti_v2/blob/main/otti_v2-000002.safetensors
 
 COPY entrypoint.sh /content/
 RUN chown -R user:user /content
