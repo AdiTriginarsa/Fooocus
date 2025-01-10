@@ -16,6 +16,10 @@ The docker image is based on NVIDIA CUDA 12.4 and PyTorch 2.1, see [Dockerfile](
 1. Clone this repository
 2. Run the docker container with `docker compose up`.
 
+OR
+1. Clone this repository
+2. Run the docker container with `docker build -t fooocus:latest .`.
+
 ### Running with Docker
 
 ```sh
